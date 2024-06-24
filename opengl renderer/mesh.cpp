@@ -1,16 +1,5 @@
 #include "mesh.h"
 
-//Mesh::Mesh(vector<Vertex>& vertices, vector<unsigned int>& indices, vector<Texture>& textures)
-//{
-//	this->m_Vertices = vertices;
-//	this->m_Indices = indices;
-//	this->m_Textures = textures;
-//	// VBOÅAVAOÅAEBOÇê›íË
-//#ifdef _DEBUG
-//	std::cout << "Mesh Copied!";
-//#endif
-//	SetupMesh();
-//}
 
 Mesh:: Mesh(vector<Vertex>&& vertices, vector<unsigned int>&& indices, vector<Texture>&& textures):
 	m_Vertices(std::move(vertices)), m_Indices(std::move(indices)), m_Textures(std::move(textures))

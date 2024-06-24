@@ -128,14 +128,7 @@ void Game::Draw()
 	PreDraw();
 	RenderShadow();
 	DrawPolygons();
-	//{
-	//	m_Shaders[3].use();
-	//	m_Shaders[3].setFloat("near_plane", 1.0f);
-	//	m_Shaders[3].setFloat("far_plane", 7.5f);
-	//	glActiveTexture(GL_TEXTURE0);
-	//	glBindTexture(GL_TEXTURE_2D,m_Shadow[0].GetShadowTex());
-	//	Game::renderQuad();
-	//}
+
 	DrawImgui();
 
 	glfwSwapBuffers(m_Window);
@@ -223,17 +216,6 @@ void Game::DrawImgui()
 	if (ImGui::Button("Reset")) {
 		m_Player[0].Reset();
 	}
-
-	//grizmo関係
-	//{
-	//	ImGuizmo::SetOrthographic(false);
-	//	ImGuizmo::SetDrawlist();
-
-	//	float windowWidth = static_cast<float>(ImGui::GetWindowWidth());
-	//	float windowHeight = static_cast<float>(ImGui::GetWindowHeight());
-	//	ImGuizmo::SetRect(ImGui::GetWindowPos().x, ImGui::GetWindowPos().y, windowWidth, windowHeight);
-	//}
-
 
 
 	ImGui::End();
@@ -444,26 +426,26 @@ bool Game::InitImgui()
 bool Game::InitResouce()
 {
 	//モデルを読み込む
-	m_Model.emplace_back("MODEL/Maria/Maria.dae");
+	m_Model.emplace_back("../MODEL/Maria/Maria.dae");
 	//Normalmapを読み込む
-	Texture normal = Model::loadMaterialTexturesManully("textures/maria_normal.png", std::string("texture_normal"), "MODEL/Maria");
+	Texture normal = Model::loadMaterialTexturesManully("textures/maria_normal.png", std::string("texture_normal"), "../MODEL/Maria");
 	m_Model[0].m_Meshes[0].m_Textures.emplace_back(std::move(normal));
 
 	//アニメーションを読み込む
 	m_Animation.reserve(12);
-	m_Animation.emplace_back("MODEL/Maria/Great Sword Idle.dae", &m_Model[0]);
-	m_Animation.emplace_back("MODEL/Maria/Warrior Idle.dae", &m_Model[0]);
-	m_Animation.emplace_back("MODEL/Maria/Great Sword Walk.dae", &m_Model[0]);
-	m_Animation.emplace_back("MODEL/Maria/Great Sword Run.dae", &m_Model[0]);
-	m_Animation.emplace_back("MODEL/Maria/Great Sword Walk Back.dae", &m_Model[0]);
-	m_Animation.emplace_back("MODEL/Maria/Great Sword Run Back.dae", &m_Model[0]);
-	m_Animation.emplace_back("MODEL/Maria/Great Sword 180 Turn.dae", &m_Model[0]);
-	m_Animation.emplace_back("MODEL/Maria/Great Sword Turn Left.dae", &m_Model[0]);
-	m_Animation.emplace_back("MODEL/Maria/Great Sword Turn Right.dae", &m_Model[0]);
-	m_Animation.emplace_back("MODEL/Maria/Great Sword Slash Single.dae", &m_Model[0]);
-	m_Animation.emplace_back("MODEL/Maria/Great Sword Blocking.dae", &m_Model[0]);
-	m_Animation.emplace_back("MODEL/Maria/Standing Dive Forward.dae", &m_Model[0]);
-	m_Animation.emplace_back("MODEL/Maria/Great Sword Jump Attack.dae", &m_Model[0]);
+	m_Animation.emplace_back("../MODEL/Maria/Great Sword Idle.dae", &m_Model[0]);
+	m_Animation.emplace_back("../MODEL/Maria/Warrior Idle.dae", &m_Model[0]);
+	m_Animation.emplace_back("../MODEL/Maria/Great Sword Walk.dae", &m_Model[0]);
+	m_Animation.emplace_back("../MODEL/Maria/Great Sword Run.dae", &m_Model[0]);
+	m_Animation.emplace_back("../MODEL/Maria/Great Sword Walk Back.dae", &m_Model[0]);
+	m_Animation.emplace_back("../MODEL/Maria/Great Sword Run Back.dae", &m_Model[0]);
+	m_Animation.emplace_back("../MODEL/Maria/Great Sword 180 Turn.dae", &m_Model[0]);
+	m_Animation.emplace_back("../MODEL/Maria/Great Sword Turn Left.dae", &m_Model[0]);
+	m_Animation.emplace_back("../MODEL/Maria/Great Sword Turn Right.dae", &m_Model[0]);
+	m_Animation.emplace_back("../MODEL/Maria/Great Sword Slash Single.dae", &m_Model[0]);
+	m_Animation.emplace_back("../MODEL/Maria/Great Sword Blocking.dae", &m_Model[0]);
+	m_Animation.emplace_back("../MODEL/Maria/Standing Dive Forward.dae", &m_Model[0]);
+	m_Animation.emplace_back("../MODEL/Maria/Great Sword Jump Attack.dae", &m_Model[0]);
 
 	Player player;
 	for (int i = 0; i < m_Model.size(); i++)
@@ -529,9 +511,9 @@ bool Game::InitResouce()
 
 	//メッシュフィールド
 	m_Field.emplace_back(MESH_POS, MESH_ROT, MESH_X, MESH_Y, MESH_SIZE, MESH_SIZE);
-	m_Field[0].LoadTexture(std::string("TEXTURE/wall.jpg"), std::string("texture_diffuse"));
-	m_Field[0].LoadTexture(std::string("TEXTURE/NormalMap.jpg"), std::string("texture_normal"));
-	m_Field[0].LoadTexture(std::string("TEXTURE/SpecularMap.jpg"), std::string("texture_specular"));
+	m_Field[0].LoadTexture(std::string("../TEXTURE/wall.jpg"), std::string("texture_diffuse"));
+	m_Field[0].LoadTexture(std::string("../TEXTURE/NormalMap.jpg"), std::string("texture_normal"));
+	m_Field[0].LoadTexture(std::string("../TEXTURE/SpecularMap.jpg"), std::string("texture_specular"));
 	return true;
 }
 
@@ -830,27 +812,7 @@ void Game::ReadNodeHierarchyImGui(NodeData& node)
 		{
 			//当骨を使用するか？
 			ImGui::Checkbox("Use", &node.unmasked);
-			/*const char* items[] = { "Animation1", "Animation2","Masked"};
-			static int item_current_idx = 0;
-			if (ImGui::BeginCombo("Current Animation", combo_preview_value))
-			{
-				for (int n = 0; n < IM_ARRAYSIZE(items); n++)
-				{
-
-					const bool is_selected = (item_current_idx == n);
-					if (ImGui::Selectable(items[n], is_selected))
-					{
-						item_current_idx = n;
-						m_Player[0].PlayAni(static_cast<PlayerMove>(item_current_idx));
-					}
-
-					if (is_selected)
-					{
-						ImGui::SetItemDefaultFocus();
-					}
-				}
-				ImGui::EndCombo();
-			}*/
+		
 			if (!node.unmasked)
 				SeteUseFalse(node);
 			for (int i = 0; i < node.childrenCount; i++)

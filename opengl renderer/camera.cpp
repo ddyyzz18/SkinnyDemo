@@ -90,21 +90,13 @@ void Camera::ProcessMouseMovement(float xoffset, float yoffset, GLboolean constr
 //　マウススクロール処理
 void Camera::ProcessMouseScroll(float yoffset)
 {
-	/*if (m_Mode == FREE)
-	{*/
-		Zoom -= (float)yoffset;
-		if (Zoom < 1.0f)
-			Zoom = 1.0f;
-		if (Zoom > 45.0f)
-			Zoom = 45.0f;
-	//}
-	//else if (m_Mode == THIRD_PERSON)
-	//{
-	//	m_Len+= (float)yoffset;
-	//	glm::vec3 focus = *m_Focus;
-	//	focus.y += 0.5f;
-	//	Position = m_Len * Front + focus;
-	//}
+
+	Zoom -= (float)yoffset;
+	if (Zoom < 1.0f)
+		Zoom = 1.0f;
+	if (Zoom > 45.0f)
+		Zoom = 45.0f;
+
 
 }
 

@@ -60,9 +60,6 @@
     <Filter Include="Light">
       <UniqueIdentifier>{4d9520f0-2426-4730-8858-44c4690841e5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Save">
-      <UniqueIdentifier>{02e21a13-d5e0-443e-aaf5-2da4fc2eb666}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Dependencies\Imgui\Imguizmo">
       <UniqueIdentifier>{df6ee831-ab82-4945-9c65-7075323466b4}</UniqueIdentifier>
     </Filter>
@@ -255,9 +252,6 @@
     </ClInclude>
     <ClInclude Include="game.h">
       <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Save.h">
-      <Filter>Save</Filter>
     </ClInclude>
     <ClInclude Include="Dependencies\include\imgui\ImSequencer.h">
       <Filter>Dependencies\Imgui\Imguizmo</Filter>

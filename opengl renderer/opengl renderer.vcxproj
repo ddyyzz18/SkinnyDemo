@@ -24,6 +24,7 @@
     <ProjectGuid>{d6f5183d-e796-42c9-b959-4135b769b357}</ProjectGuid>
     <RootNamespace>openglrenderer</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>SkinnyDemo</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -228,7 +229,6 @@
     <ClInclude Include="mesh.h" />
     <ClInclude Include="model_animation.h" />
     <ClInclude Include="player.h" />
-    <ClInclude Include="Save.h" />
     <ClInclude Include="shader.h" />
     <ClInclude Include="shadowmap.h" />
     <ClInclude Include="stb_image.h" />

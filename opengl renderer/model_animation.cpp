@@ -379,7 +379,3 @@ void Model::SaveModelBin()
 	outFile.close();
 }
 
-//void Model:: SaveTextureBin(unsigned char* data)
-//{
-//
-//}
