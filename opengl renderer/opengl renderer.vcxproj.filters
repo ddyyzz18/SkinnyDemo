@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Dependencies">
+      <UniqueIdentifier>{fb1cd161-48e2-47a9-829f-b14734a06dab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\GLAD">
+      <UniqueIdentifier>{cec80a96-0178-4573-b338-c287475db2d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GLSL">
+      <UniqueIdentifier>{f4590285-a8fc-476f-9669-986670e55389}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\STB">
+      <UniqueIdentifier>{d39b869c-7204-4d93-bacb-56822b183dff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\GLM">
+      <UniqueIdentifier>{781a1369-f620-4e4c-ba03-b940f5028daf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\FBX_SDK">
+      <UniqueIdentifier>{ca94538d-78f7-4c54-b3d2-204e18f44e5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\Imgui">
+      <UniqueIdentifier>{2933dc34-3567-4b4b-897b-e4356c8f4de8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{dc80e5d9-fed3-4db2-b4cb-4c403b2216f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Field">
+      <UniqueIdentifier>{32844fb7-5eb6-4d29-aa53-421ee0e2f445}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Animation">
+      <UniqueIdentifier>{71c248d5-1d8c-42a3-89ff-84c2a28eaa6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{df923fb4-f436-46d4-ba91-da45dc7bf369}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{23c80b35-3520-4963-a3e7-bb52dead7422}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{6bc5a622-6ebe-4eb0-b86b-5df18875b0ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{e982ef22-e503-4707-ad06-397d3ef76a87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Player">
+      <UniqueIdentifier>{83c57676-7223-42fd-81eb-6e1fe6036148}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Timer">
+      <UniqueIdentifier>{5c7fc000-805a-4e0b-b49c-1cafa5a03273}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Light">
+      <UniqueIdentifier>{4d9520f0-2426-4730-8858-44c4690841e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Save">
+      <UniqueIdentifier>{02e21a13-d5e0-443e-aaf5-2da4fc2eb666}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\Imgui\Imguizmo">
+      <UniqueIdentifier>{df6ee831-ab82-4945-9c65-7075323466b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{ec85ad4b-f347-443a-bf52-b8da5f8a7461}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Light\ShadowMap">
+      <UniqueIdentifier>{a0e4551b-4c5a-4209-b9b1-b967a212d28f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="glad.c">
+      <Filter>Dependencies\GLAD</Filter>
+    </ClCompile>
+    <ClCompile Include="stb_image.cpp">
+      <Filter>Dependencies\STB</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\include\imgui\imgui.cpp">
+      <Filter>Dependencies\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\include\imgui\imgui_draw.cpp">
+      <Filter>Dependencies\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\include\imgui\imgui_tables.cpp">
+      <Filter>Dependencies\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\include\imgui\imgui_widgets.cpp">
+      <Filter>Dependencies\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\include\imgui\imgui_impl_glfw.cpp">
+      <Filter>Dependencies\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\include\imgui\imgui_impl_opengl3.cpp">
+      <Filter>Dependencies\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="model_animation.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="meshfield.cpp">
+      <Filter>Field</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="animation.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="animator.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="bone.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="shader.cpp">
+      <Filter>Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="camera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="keyboard.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>GameObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="timer.cpp">
+      <Filter>Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="vertex.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="light.cpp">
+      <Filter>Light</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\include\imgui\GraphEditor.cpp">
+      <Filter>Dependencies\Imgui\Imguizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\include\imgui\ImCurveEdit.cpp">
+      <Filter>Dependencies\Imgui\Imguizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\include\imgui\ImGradient.cpp">
+      <Filter>Dependencies\Imgui\Imguizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\include\imgui\ImGuizmo.cpp">
+      <Filter>Dependencies\Imgui\Imguizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\include\imgui\ImSequencer.cpp">
+      <Filter>Dependencies\Imgui\Imguizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="shadowmap.cpp">
+      <Filter>Light\ShadowMap</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stb_image.h">
+      <Filter>Dependencies\STB</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\glm\glm.hpp">
+      <Filter>Dependencies\GLM</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\glm\gtc\matrix_transform.hpp">
+      <Filter>Dependencies\GLM</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\glm\gtc\type_ptr.hpp">
+      <Filter>Dependencies\GLM</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\FBXSDK\fbxsdk.h">
+      <Filter>Dependencies\FBX_SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\imgui\imconfig.h">
+      <Filter>Dependencies\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\imgui\imgui.h">
+      <Filter>Dependencies\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\imgui\imgui_internal.h">
+      <Filter>Dependencies\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\imgui\imstb_rectpack.h">
+      <Filter>Dependencies\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\imgui\imstb_textedit.h">
+      <Filter>Dependencies\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\imgui\imstb_truetype.h">
+      <Filter>Dependencies\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\imgui\imgui_impl_glfw.h">
+      <Filter>Dependencies\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\imgui\imgui_impl_opengl3.h">
+      <Filter>Dependencies\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\imgui\imgui_impl_opengl3_loader.h">
+      <Filter>Dependencies\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="model_animation.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="meshfield.h">
+      <Filter>Field</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="animation.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="animator.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="animdata.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="bone.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="assimp_glm_helpers.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="shader.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="keyboard.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="gameobject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="light.h">
+      <Filter>Light</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Save.h">
+      <Filter>Save</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\imgui\ImSequencer.h">
+      <Filter>Dependencies\Imgui\Imguizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\imgui\ImZoomSlider.h">
+      <Filter>Dependencies\Imgui\Imguizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\imgui\GraphEditor.h">
+      <Filter>Dependencies\Imgui\Imguizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\imgui\ImCurveEdit.h">
+      <Filter>Dependencies\Imgui\Imguizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\imgui\ImGradient.h">
+      <Filter>Dependencies\Imgui\Imguizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\include\imgui\ImGuizmo.h">
+      <Filter>Dependencies\Imgui\Imguizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="shadowmap.h">
+      <Filter>Light\ShadowMap</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="anime_normal.fs">
+      <Filter>GLSL</Filter>
+    </None>
+    <None Include="anime_normal.vs">
+      <Filter>GLSL</Filter>
+    </None>
+    <None Include="field.fs">
+      <Filter>GLSL</Filter>
+    </None>
+    <None Include="field.vs">
+      <Filter>GLSL</Filter>
+    </None>
+    <None Include="field_normal.vs">
+      <Filter>GLSL</Filter>
+    </None>
+    <None Include="field_normal.fs">
+      <Filter>GLSL</Filter>
+    </None>
+    <None Include="shadowmap.vs">
+      <Filter>GLSL</Filter>
+    </None>
+    <None Include="shadowmap.fs">
+      <Filter>GLSL</Filter>
+    </None>
+    <None Include="debug_quad.vs">
+      <Filter>GLSL</Filter>
+    </None>
+    <None Include="debug_quad_depth.fs">
+      <Filter>GLSL</Filter>
+    </None>
+  </ItemGroup>
+</Project>
